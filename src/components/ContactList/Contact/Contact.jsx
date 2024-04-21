@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { IoPerson } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 
-import { removeContact } from "../../../redux/contactsSlice";
+import { deleteContact } from "../../../redux/contactsSlice";
 
 import css from "./Contact.module.scss";
 
@@ -12,7 +12,7 @@ function Contact({ contact }) {
   const { id, name, number } = contact;
 
   const hendleDelete = (id) => {
-    dispatch(removeContact(id))
+    dispatch(deleteContact(id))
   };
 
   return (
